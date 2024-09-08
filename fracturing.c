@@ -48,11 +48,37 @@ double calculateArea(){
 }
 
 double calculateWidth(){
+    double x1;
+    double y1;
+    double x2;
+    double y2;
 
+    printf("Enter 1st point coordinates:");
+    scanf("%lf %lf", &x1, &y1);
+
+    printf("Enter 2nd point coordinates:");
+    scanf("%lf %lf", &x2, &y2);
+
+    double width = fabs(x2 - x1);
+
+    printf("The width of the city is: %.2lf\n", width);
 }
 
 double calculateHeight(){
+    double x1;
+    double y1;
+    double x2;
+    double y2;
 
+    printf("Enter 1st point coordinates:");
+    scanf("%lf %lf", &x1, &y1);
+
+    printf("Enter 2nd point coordinates:");
+    scanf("%lf %lf", &x2, &y2);
+
+    double height = fabs(y2 - y1);
+
+    printf("The height of the city is: %.2lf\n", height);
 }
 
 int main(int argc, char **argv){
@@ -61,7 +87,7 @@ int main(int argc, char **argv){
     
     calculatePerimeter();
     calculateArea();
-    // calculateWidth();
-    // calculateHeight();
+    calculateWidth();
+    calculateHeight();
     return 0;
 }
